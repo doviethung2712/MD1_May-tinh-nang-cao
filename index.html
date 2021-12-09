@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Máy Tính Nâng Cao</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td colspan="4"><input type="text" id="so"></td>
+    </tr>
+    <tr>
+        <td><button onclick="inputt('(')">(</button></td>
+        <td><button onclick="inputt(')')">)</button></td>
+        <td><button onclick="inputt('%')">%</button></td>
+        <td><button onclick="rs()">AC</button></td>
+    </tr>
+
+    <tr>
+        <td><button onclick="inputt(7)">7</button></td>
+        <td><button onclick="inputt(8)">8</button></td>
+        <td><button onclick="inputt(9)">9</button></td>
+        <td><button onclick="inputt('+')">+</button></td>
+    </tr>
+
+    <tr>
+        <td><button onclick="inputt(4)">4</button></td>
+        <td><button onclick="inputt(5)">5</button></td>
+        <td><button onclick="inputt(6)">6</button></td>
+        <td><button onclick="inputt('*')">x</button></td>
+    </tr>
+
+    <tr>
+        <td><button onclick="inputt(1)">1</button></td>
+        <td><button onclick="inputt(2)">2</button></td>
+        <td><button onclick="inputt(3)">3</button></td>
+        <td><button onclick="inputt('-')">-</button></td>
+    </tr>
+
+    <tr>
+        <td><button onclick="inputt(0)">0</button></td>
+        <td><button onclick="inputt('.')">.</button></td>
+        <td><button onclick="kq()">=</button></td>
+        <td><button onclick="inputt('+')">+</button></td>
+        <td><button onclick="xoa()">Xóa</button></td>
+    </tr>
+</table>
+
+<script>
+    function inputt(kitu){
+        document.getElementById('so').value += (kitu);
+    }
+
+    function kq(){
+       let tinh = document.getElementById('so').value;
+       document.getElementById('so').value = eval(tinh)
+    }
+
+    function rs(){
+        document.getElementById('so').value = " ";
+    }
+
+    function xoa(kitu){
+        document.getElementById('so').value -= (kitu);
+    }
+</script>
+</body>
+</html>
